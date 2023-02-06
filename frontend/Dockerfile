@@ -1,4 +1,4 @@
-FROM node:16.16.0-buster AS build
+FROM node
 
 # Create app directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install --production
+RUN npm install
 # If you are building your code for production
 RUN npm ci 
 RUN npm install react-scripts@3.4.1 -g --silent
