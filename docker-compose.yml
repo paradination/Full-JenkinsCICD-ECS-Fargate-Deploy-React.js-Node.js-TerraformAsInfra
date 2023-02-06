@@ -2,8 +2,6 @@ version: '3'
 
 services:
   backend:
-    env_file:
-        "./backend/backend.env"
     build:
       context: ./backend
       dockerfile: ./Dockerfile
