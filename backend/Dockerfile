@@ -10,13 +10,12 @@ COPY package*.json ./
 
 RUN npm install
 # If you are building your code for production
-RUN npm ci --only=production
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm ci
 
 # Bundle app source
 COPY . .
-RUN npm run build
+
 EXPOSE 8080
-CMD [ "node", "index.js" ]
+CMD ["npm", "start"]
 
 
