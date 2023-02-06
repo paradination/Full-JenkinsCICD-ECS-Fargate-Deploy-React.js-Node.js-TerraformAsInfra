@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16.16.0-buster AS backend
 
 # Create app directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --production
 # If you are building your code for production
 RUN npm ci
 
@@ -16,6 +16,6 @@ RUN npm ci
 COPY . .
 
 EXPOSE 8080
-CMD ["npm", "start"]
+CMD ["node", "index.js"]
 
 
