@@ -1,6 +1,7 @@
-FROM node
+FROM node:16.3.0-alpine
 
 # Create app directory
+RUN mkdir -p /app
 WORKDIR /app
 
 # Install app dependencies
@@ -16,6 +17,6 @@ RUN npm ci
 COPY . .
 
 EXPOSE 8080
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
 
 

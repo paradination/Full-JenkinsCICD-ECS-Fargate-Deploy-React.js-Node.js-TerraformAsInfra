@@ -1,19 +1,32 @@
 version: '3'
 
 services:
+
+###########################
+# Setup for backend container
+###########################
   backend:
-    build:
-      context: ./backend
-      dockerfile: ./Dockerfile
-    image: "backend1"
+    build: ./backend
+    expose: 
+      - "8080"
     ports:
       - "8080:8080"
+    volumes:
+      - ./backend/src:/app/src
+    command: npm run start
+
+###########################
+# Setup for frontend container
+###########################
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: ./Dockerfile
-    image: "frontend1"
+    build: ./frontend
+    expose: 
+      - "3000"
     ports:
-      - "80:3000"
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
     links:
-      - "backend:be"
+      - backend
+    command: npm run start

@@ -1,6 +1,7 @@
-FROM node
+FROM node:16.3.0-alpine
 
 # Create app directory
+RUN mkdir -p /app
 WORKDIR /app
 
 # Install app dependencies
@@ -8,7 +9,7 @@ WORKDIR /app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install
+
 # If you are building your code for production
 RUN npm ci 
 RUN npm install react-scripts@3.4.1 -g --silent
