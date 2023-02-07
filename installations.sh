@@ -22,7 +22,7 @@ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinu
 sudo yum -y install terraform
 
 #install docker
-sudo yum install docker -y
+sudo yum install docker docker-compose -y
 sudo systemctl start docker
 sudo systemctl enable docker
 
