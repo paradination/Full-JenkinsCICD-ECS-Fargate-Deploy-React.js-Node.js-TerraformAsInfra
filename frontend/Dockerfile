@@ -12,7 +12,7 @@ COPY package*.json ./
 
 # If you are building your code for production
 RUN npm ci 
-RUN npm install 
+RUN npm install react-scripts@3.4.1 -g --silent
 
 
 # Bundle app source
