@@ -15,14 +15,15 @@ sudo yum install git -y
 
 
 #nodejs will be installed in the jenkins server
-
-# Setup terraform
-sudo yum install -y yum-utils
-sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
-sudo yum -y install terraform
+# terraform is installed in jenkins server
 
 #install docker
-sudo yum install docker docker-compose -y
+sudo yum install docker -y
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-`uname -s`-`uname -m` | sudo tee /usr/local/bin/docker-compose > /dev/null
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+
 sudo systemctl start docker
 sudo systemctl enable docker
 
