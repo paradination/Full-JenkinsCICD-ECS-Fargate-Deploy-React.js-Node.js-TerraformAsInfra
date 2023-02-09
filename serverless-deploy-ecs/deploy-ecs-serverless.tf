@@ -9,7 +9,7 @@ resource "aws_ecs_cluster" "main" {
 
 resource "aws_ecs_task_definition" "service" {
   family = "LightFeather-Pipeline-Project"  
-  execution_role_arn       = "arn:aws:iam::<insert aws account no>:role/ecsTaskExecutionRole"
+  execution_role_arn       = "arn:aws:iam::925229124194:role/ecsTaskExecutionRole"
   network_mode             = "awsvpc"
 
   cpu                      = var.fargate_cpu
