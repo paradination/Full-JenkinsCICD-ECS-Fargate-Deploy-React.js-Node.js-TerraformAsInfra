@@ -176,7 +176,7 @@ pipeline {
                         echo 'destroying ecr and ecs'
                         sh 'cd serverless-deploy-ecs && terraform destroy -auto-approve'
                         sh 'cd ecr-create-terraform && terraform destroy -auto-approve'
-                
+                        sh 'sudo docker-compose down $1'
                     }
                 }
 
