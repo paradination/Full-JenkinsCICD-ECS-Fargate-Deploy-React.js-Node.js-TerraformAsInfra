@@ -163,7 +163,7 @@ pipeline {
         stage('Approval to destroy') {
             steps {
                 script {
-                    def deploymentDelay = input id: 'Deploy', message: 'want to destroy?', submitter: 'admin', parameters: [choice(choices: ['0', '1', '5', '10', '20', '30', '50', '100'], description: 'Hours to delay deployment?', name: 'DestroyDelay')]
+                    def deploymentDelay = input id: 'Deploy', message: 'want to destroy?', submitter: 'admin', parameters: [choice(choices: ['0', '1', '5', '10', '20', '30', '50', '100'], description: 'Minutes to delay deployment?', name: 'DestroyDelay')]
                     sleep time: deploymentDelay.toInteger(), unit: 'MINUTES'
                 }
             }
