@@ -10,6 +10,7 @@ variable "name" {
 
 resource "aws_ecr_repository" "backend-ecr" {
   name   = "backend-app"
+  force_delete = true
   
   tags = {
     Name = var.name[0]
@@ -19,6 +20,7 @@ resource "aws_ecr_repository" "backend-ecr" {
 
 resource "aws_ecr_repository" "frontend-ecr" {
   name = "frontend-app"
+  force_delete = true
   
   tags = {
     Name = var.name[0]
