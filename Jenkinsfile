@@ -36,7 +36,7 @@ pipeline {
         //   steps {
               
         //           sh 'cd /var/lib/jenkins/workspace/LightFeather-Pipeline-Project/backend && sudo docker build -t backend-app:latest .'
-        //           sh 'sudo docker tag backend-app:latest 204778724427.dkr.ecr.us-east-1.amazonaws.com/backend-app:latest1'
+        //           sh 'sudo docker tag backend-app:latest 204778724427.dkr.ecr.us-east-1.amazonaws.com/backend-app:latest'
 
               
         //   }
@@ -47,7 +47,7 @@ pipeline {
         // stage('backend app push into ECR') {
         //     steps {
         //         withCredentials([aws(credentialsId: 'aws-credentials-ag', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-        //             sh 'sudo docker push 204778724427.dkr.ecr.us-east-1.amazonaws.com/backend-app:latest1'
+        //             sh 'sudo docker push 204778724427.dkr.ecr.us-east-1.amazonaws.com/backend-app:latest'
         //         }
                 
 
