@@ -1,5 +1,9 @@
 Changes to get public access:
+
+
 frontend/src/config.js ---> add the public IP of server 
+
+
 backend/config.js  ---> add the public IP of server
 
 
