@@ -10,7 +10,7 @@ STEPS:
 Jenkins
 Created an Amazon Linux 2 VM instance and call it "Jenkins-Project"
 Instance type: t2.micro
-Security Group (Open): 8080, 8081, 3000 TO 0.0.0.0/0
+Security Group (Open): 8080, 3000 TO 0.0.0.0/0
 Key pair: Select or create a new keypair
 Attached Jenkins server with IAM role having "System Administrator"
 User data (Copy the following user data): https://github.com/Saxontony/LightFeather-DevOps-Coding-Challenge/blob/Installations/Jenkins-git-terraform.sh
