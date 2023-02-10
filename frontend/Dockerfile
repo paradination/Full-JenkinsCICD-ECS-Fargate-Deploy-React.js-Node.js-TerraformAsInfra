@@ -1,7 +1,6 @@
-FROM node:16.3.0-alpine
+FROM node:16
 
 # Create app directory
-RUN mkdir -p /app
 WORKDIR /app
 
 # Install app dependencies
@@ -14,11 +13,10 @@ COPY package*.json ./
 RUN npm ci 
 
 
+
 # Bundle app source
 COPY . .
 
-
 EXPOSE 3000
-
 CMD ["npm", "start"]
 

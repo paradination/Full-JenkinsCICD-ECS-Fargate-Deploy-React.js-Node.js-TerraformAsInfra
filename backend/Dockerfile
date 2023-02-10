@@ -1,7 +1,6 @@
-FROM node:16.3.0-alpine
+FROM node:16
 
 # Create app directory
-RUN mkdir -p /app
 WORKDIR /app
 
 # Install app dependencies
