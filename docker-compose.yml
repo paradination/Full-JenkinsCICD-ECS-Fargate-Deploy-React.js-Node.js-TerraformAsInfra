@@ -9,8 +9,6 @@ services:
     build: ./backend
     expose: 
       - "8080"
-    ports:
-      - "9101:8080"
     volumes:
       - ./backend/src:/app/src
     command: npm run start
@@ -23,7 +21,7 @@ services:
     expose: 
       - "3000"
     ports:
-      - "9102:3000"
+      - "3000:3000"
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
