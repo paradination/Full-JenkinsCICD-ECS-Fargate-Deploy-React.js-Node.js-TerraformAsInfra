@@ -1,9 +1,5 @@
-# LightFeather-DevOps-Coding-Challenge
-
-Go to GitHub (github.com)
-Login to your GitHub Account
-Fork repository "devops-code-challenge ." (https://github.com/Team-LightFeather/devops-code-challenge.git) & name it "LightFeather-DevOps-Coding-Challenge"
-Cloned your newly created repo to your local
+# DevOps-Coding-Challenge
+# CICD with jenkins and terraform for the infra
 
 STEPS:
 
@@ -13,13 +9,15 @@ Instance type: t2.micro
 Security Group (Open): 8080, 8081, 3000 TO 0.0.0.0/0
 Key pair: Select or create a new keypair
 Attached Jenkins server with IAM role having "System Administrator"
-User data (Copy the following user data): https://github.com/Saxontony/LightFeather-DevOps-Coding-Challenge/blob/Installations/Jenkins-git-terraform.sh
-Launch Instance
+User data (Copy the following user data): https://github.com/paradination/training/blob/main/installations.sh
 
+Launch Instance
 CONFIGURATION FILE EDITS:
 Made a change in the config files to allow public access of both App 
 
 bankend/config.js
+
+
 changed the IP to public IP
 
 JENKINS CICD STEPS FOR PROJECT:
